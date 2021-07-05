@@ -1,0 +1,244 @@
+.navigation {
+    grid-column: 2/span 6;
+    font-size: 1.3rem;
+    font-weight: 400;
+    @media only screen and (max-width: $bp-large) {
+        grid-column: 1/-1;
+        padding: 0 2rem;
+    }
+    @media only screen and (max-width: $bp-large) {
+        padding: 0;
+    }
+}
+
+.mainnavigation {
+    @media only screen and (max-width: $bp-medium) {
+        align-self: start;
+    }
+}
+
+.subnavigation {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: max-content;
+    margin-bottom: 1.5rem;
+    @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 1rem;
+    }
+    .header__story--socials {
+        color: #000;
+        align-self: center;
+        grid-column: 1/span 1;
+        grid-row: 1/-1;
+        justify-self: start;
+        font-size: 1.2rem;
+        svg {
+            width: 1.3rem;
+            height: 1.3rem;
+            margin-right: 1.2rem;
+        }
+    }
+    img {
+        grid-column: 2/span 3;
+        grid-row: 1/-1;
+        justify-self: center;
+        align-self: center;
+        height: 4.5rem;
+        object-fit: scale-down;
+        width: 23%;
+        @media only screen and (max-width: $bp-smaller) {
+            grid-column: 2/span 2;
+        }
+    }
+    .side__instagram {
+        grid-row: 1/-1;
+        grid-column: 5/-1;
+        justify-self: end;
+        grid-column-gap: 1rem;
+        @media only screen and (max-width: $bp-large) {
+            grid-column-gap: 0;
+            grid-column: 4/-1;
+        }
+        @media only screen and (max-width: $bp-smaller) {
+            grid-column: 4/-1;
+            justify-self: end;
+        }
+        .content__card--primary {
+            img {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+        &--details {
+            font-size: 1rem;
+            h4 {
+                text-transform: uppercase;
+                margin-bottom: .4rem;
+                justify-self: center;
+                font-size: 1.2rem;
+            }
+            b {
+                margin-right: .3rem;
+            }
+            span {
+                color: #aaa;
+                font-weight: 500;
+            }
+        }
+        &--follow {
+            margin: 0;
+            a {
+                letter-spacing: .1rem;
+                font-weight: 500;
+                svg {
+                    width: 1rem;
+                    height: 1rem;
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.nav {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 15vw 60vw 20vw;
+    &__content {
+        display: grid;
+        grid-column: 1/-1;
+        @media only screen and (max-width: $bp-smaller) {
+            justify-self: center;
+        }
+    }
+    &__main,
+    &__side {
+        @media only screen and(max-width: $bp-smaller) {
+            display: none;
+        }
+    }
+    @media only screen and (max-width: $bp-large) {
+        padding: 0 2rem;
+    }
+    &__menu {
+        display: none;
+        grid-column: 1/-1;
+        justify-self: end;
+        svg {
+            width: 3rem !important;
+            height: 3rem !important;
+        }
+    }
+    &--icon {
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+    &__main {
+        grid-column: 2/span 1;
+        justify-self: center;
+        @media only screen and (max-width: $bp-largest) {
+            grid-column: 1/span 2;
+        }
+        @media only screen and (max-width: $bp-large) {
+            justify-self: start;
+        }
+        @media only screen and (max-width: $bp-smaller) {
+            grid-column: 2/-1;
+            justify-self: center;
+        }
+        ul {
+            list-style: none;
+            li {
+                display: inline-block;
+                @media only screen and (max-width: $bp-smaller) {
+                    margin: 0;
+                    margin-bottom: 1rem;
+                }
+                &:not(:last-of-type) {
+                    margin-right: 2rem;
+                    @media only screen and (max-width: $bp-smaller) {
+                        margin-right: 0;
+                    }
+                }
+                @media only screen and (max-width: $bp-smaller) {
+                    display: block;
+                }
+                a {
+                    &:link,
+                    &:visited {
+                        color: #000;
+                        text-decoration: none;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: transform .2s;
+                        -webkit-transition: transform .2s;
+                        -moz-transition: transform .2s;
+                        -ms-transition: transform .2s;
+                        -o-transition: transform .2s;
+                    }
+                    &:hover {
+                        transform: translateY(-.1rem) scale(1.02);
+                        -webkit-transform: translateY(-.1rem) scale(1.02);
+                        -moz-transform: translateY(-.1rem) scale(1.02);
+                        -ms-transform: translateY(-.1rem) scale(1.02);
+                        -o-transform: translateY(-.1rem) scale(1.02);
+                    }
+                    &:active {
+                        color: #eee;
+                    }
+                    span {
+                        margin-left: .4rem;
+                        background: #8d8c8c;
+                        padding: .2rem .7rem;
+                        color: #fff;
+                        border-radius: 50px;
+                        -webkit-border-radius: 50px;
+                        -moz-border-radius: 50px;
+                        -ms-border-radius: 50px;
+                        -o-border-radius: 50px;
+                    }
+                }
+            }
+        }
+    }
+    &__icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-left: .4rem;
+    }
+    &__side {
+        grid-column: 3/span 1;
+        justify-self: center;
+        @media only screen and (max-width: $bp-smaller) {
+            grid-column: 1/-1;
+            justify-self: center;
+            margin-left: -1rem;
+        }
+        a {
+            &:last-of-type {
+                @media only screen and (max-width: $bp-smaller) {
+                    display: block;
+                    margin: 0 !important;
+                    margin-top: 1rem !important;
+                }
+            }
+        }
+    }
+    .nav__menu {
+        @media only screen and (max-width: $bp-smaller) {
+            display: block;
+        }
+    }
+    .nav__checkbox {
+        display: none;
+        &:checked {
+            background: red;
+        }
+    }
+}
+
+.nav__checkbox:checked~.nav__main,
+.nav__checkbox:checked~.nav__side {
+    display: block;
+}

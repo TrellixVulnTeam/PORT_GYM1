@@ -1,0 +1,28 @@
+.btn {
+    padding: 1rem 1.6rem;
+    text-transform: uppercase;
+    transition: all .2s;
+    z-index: 20;
+    font-weight: 400;
+    cursor: pointer;
+    &:link,
+    &:visited {
+        color: #000;
+        background: #0000001c;
+    }
+    &-dark {
+        &:link,
+        &:visited {
+            background: #424242;
+            color: #fff;
+            opacity: .8;
+        }
+    }
+    &-black {
+        background: #000 !important;
+        color: #fff !important;
+    }
+    &-block {
+        align-self: stretch !important;
+    }
+}

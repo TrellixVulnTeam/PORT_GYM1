@@ -1,0 +1,211 @@
+.header {
+    grid-column: 2/span 6;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+    font-weight: 300;
+    font-size: 1.3rem;
+    @media only screen and (max-width: $bp-large) {
+        grid-template-columns: repeat(7, 1fr);
+        grid-column: 2/span -1;
+    }
+    @media only screen and (max-width: $bp-large) {
+        grid-column: 1/-1;
+        padding: 0 2rem;
+    }
+    @media only screen and (max-width: $bp-medium) {
+        padding: 0;
+    }
+    &__story {
+        padding: 1.5rem;
+        grid-column: 1/span 1;
+        background: #000;
+        color: #fff;
+        height: 37vw;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(6, max-content);
+        justify-content: center;
+        align-content: center;
+        padding: 2rem 7rem;
+        z-index: 10;
+        font-weight: 400;
+        @media only screen and (max-width: $bp-largest) {
+            padding: 1.2rem 2rem;
+        }
+        @media only screen and (max-width: $bp-large) {
+            grid-column: 1/span 3;
+            padding: 3rem;
+            height: 39vw;
+        }
+        @media only screen and (max-width: $bp-medium) {
+            grid-column: 1/-1;
+            height: max-content;
+        }
+        &--location {
+            margin-bottom: 1.7vh;
+            grid-column: 1/-1;
+            justify-self: start;
+            letter-spacing: 1px;
+            @media only screen and (max-width: $bp-largest) {
+                margin-bottom: 1vh;
+            }
+            @media only screen and (max-width: $bp-large) {
+                margin-bottom: .7vh;
+            }
+        }
+        &--header {
+            grid-column: 1/-1;
+        }
+        &--author {
+            margin-top: 2vh;
+            grid-column: 1/-1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            font-size: 1rem;
+            @media only screen and (max-width: $bp-largest) {
+                margin: 0;
+            }
+            @media only screen and (max-width: $bp-medium) {
+                grid-column: 1/span 3;
+            }
+            span {
+                &:not(:last-of-type) {
+                    margin-right: auto;
+                }
+            }
+            img {
+                width: 2rem;
+                height: 2rem;
+                margin-left: 1rem;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+            }
+        }
+        &--details {
+            grid-column: 1/-1;
+            margin-top: 4vh;
+            font-size: 1.2rem;
+            margin-bottom: 5vh;
+            line-height: 1.4rem;
+            @media only screen and (max-width: $bp-largest) {
+                margin-top: 2vh;
+                font-size: 1.2rem;
+                margin-bottom: 4vh;
+            }
+            @media only screen and (max-width: $bp-large) {
+                margin-bottom: 3vh;
+            }
+            &-sm {
+                @media only screen and (max-width: $bp-medium) {
+                    display: none;
+                }
+            }
+        }
+        &--socials {
+            grid-column: 4/-1;
+            grid-row: 6/span 1;
+            display: flex;
+            color: #fff;
+            justify-content: end;
+            align-items: center;
+            font-size: 1.1rem;
+            @media only screen and (max-width: $bp-largest) {
+                grid-column: 1/-1;
+                grid-row: 6/span 1;
+            }
+            &-sm {
+                @media only screen and (max-width: $bp-medium) {
+                    display: none;
+                }
+            }
+            &-1,
+            &-2,
+            &-3 {
+                display: flex;
+                margin-left: 1rem;
+                &:not(:last-of-type) {
+                    border-right: 2px solid #aaaaaa34;
+                    padding-right: 1rem;
+                }
+                p {
+                    align-self: flex-end;
+                }
+                svg {
+                    fill: currentColor;
+                    margin-right: .3rem;
+                    width: 1.2rem;
+                    height: 1.2rem;
+                }
+            }
+        }
+    }
+    &__image {
+        grid-column: 2/-1;
+        @media only screen and (max-width: $bp-large) {
+            grid-column: 4/-1;
+        }
+        @media only screen and (max-width: $bp-medium) {
+            grid-column: 1/-1;
+            grid-row: 1/span 1;
+        }
+        &--item {
+            height: 37vw;
+            @media only screen and (max-width: $bp-large) {
+                height: 39vw;
+            }
+            @media only screen and (max-width: $bp-medium) {
+                height: 39vw;
+            }
+        }
+        &--img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+    }
+}
+
+.btn {
+    grid-column: 1/span 3;
+    grid-row: 6/span 1;
+    align-self: start;
+    justify-self: start;
+    padding: 1rem 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    &:hover {
+        transform: translateY(-.2rem) scale(1.02);
+        -webkit-transform: translateY(-.2rem) scale(1.02);
+        -moz-transform: translateY(-.2rem) scale(1.02);
+        -ms-transform: translateY(-.2rem) scale(1.02);
+        -o-transform: translateY(-.2rem) scale(1.02);
+    }
+    svg {
+        fill: currentColor;
+        margin-left: 1.5rem;
+    }
+    @media only screen and (max-width: $bp-largest) {
+        grid-column: 1/-1;
+        grid-row: 7/span 1;
+        justify-self: stretch;
+        margin-top: 3vh;
+    }
+    @media only screen and (max-width: $bp-large) {
+        justify-self: start;
+        margin-top: 2vh;
+    }
+}

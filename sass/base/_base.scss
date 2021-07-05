@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    &::selection {
+        background-color: #424242;
+        color: #eee;
+    }
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 8px;
+    }
+    @media only screen and (max-width: $bp-small) {
+        font-size: 6px;
+    }
+    @media only screen and (max-width: $bp-smaller) {
+        font-size: 5px;
+    }
+}
