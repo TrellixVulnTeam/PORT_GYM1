@@ -25,6 +25,9 @@
     @media only screen and (max-width: $bp-medium) {
         margin-bottom: 1rem;
     }
+    @media only screen and (max-width: $bp-small) {
+        display: none;
+    }
     .header__story--socials {
         color: #000;
         align-self: center;
@@ -113,7 +116,7 @@
     }
     &__main,
     &__side {
-        @media only screen and(max-width: $bp-smaller) {
+        @media only screen and(max-width: $bp-small) {
             display: none;
         }
     }
@@ -226,7 +229,7 @@
         }
     }
     .nav__menu {
-        @media only screen and (max-width: $bp-smaller) {
+        @media only screen and (max-width: $bp-small) {
             display: block;
         }
     }

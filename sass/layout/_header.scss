@@ -42,6 +42,13 @@
             grid-column: 1/-1;
             height: max-content;
         }
+        @media only screen and (max-width: $bp-small) {
+            height: 47vw;
+        }
+        @media only screen and (max-width: $bp-smaller) {
+            height: max-content;
+            padding: 5rem 2rem;
+        }
         &--location {
             margin-bottom: 1.7vh;
             grid-column: 1/-1;
@@ -160,6 +167,12 @@
             }
             @media only screen and (max-width: $bp-medium) {
                 height: 39vw;
+            }
+            @media only screen and (max-width: $bp-small) {
+                height: 59vw;
+            }
+            @media only screen and (max-width: $bp-smaller) {
+                height: 79vw;
             }
         }
         &--img {

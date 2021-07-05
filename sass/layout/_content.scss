@@ -24,6 +24,13 @@
             @media only screen and (max-width: $bp-large) {
                 grid-column: 1/span 2;
             }
+            @media only screen and (max-width: $bp-small) {
+                padding: 0 3rem;
+                grid-column: 1/-1;
+            }
+            @media only screen and (max-width: $bp-smaller) {
+                padding: 0 1rem;
+            }
         }
         &--secondary {
             grid-column: 2/-1;
@@ -36,6 +43,13 @@
             }
             @media only screen and (max-width: $bp-large) {
                 padding: 4rem 2rem;
+            }
+            @media only screen and (max-width: $bp-small) {
+                padding: 2rem 5rem;
+                grid-column: 1/-1;
+            }
+            @media only screen and (max-width: $bp-smaller) {
+                padding: 2rem 3rem;
             }
             .header__story--socials {
                 grid-column: 3/-1;
